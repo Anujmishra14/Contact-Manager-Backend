@@ -7,7 +7,7 @@ const mongoUri=process.env.MONGO_URI;
 const app = express();
 
 app.use(cors({
-  origin: "https://contact-manager-a.netlify.app",
+  origin: "https://contact-manager-a.netlify.app/",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
