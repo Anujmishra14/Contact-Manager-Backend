@@ -7,10 +7,11 @@ const mongoUri=process.env.MONGO_URI;
 const app = express();
 
 app.use(cors({
-  origin: ["http://localhost:5173", "https://contact-manager-a.netlify.app/"],
+  origin: "https://contact-manager-a.netlify.app",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
+app.options("*", cors());
 app.use(express.json());
 
 // MongoDB connection
